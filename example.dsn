@@ -1,0 +1,31 @@
+& if else
+SET: %x 10
+SET: %i 3
+WHILE: %i
+ POSITION: %x 0
+ SET: %aux %i
+ MOD:  %aux 2
+ & linie para
+ IF: %aux
+  LINE:  %x 100 location
+  CIRCLE:  100 %x 300 
+  POSITION: %x 600
+  LINE:  %x 700 location
+  CIRCLE: 100 %x 900 
+  POSITION: %x 1100
+  LINE:  %x 1200 location
+ & linie impara
+ ELSE
+  CIRCLE: 100 %x 100 
+  POSITION: %x 300
+  LINE:  %x 400 location
+  CIRCLE: 100 %x 600 
+  POSITION: %x 800
+  LINE:  %x 900 location
+  CIRCLE: 100 %x 1100 
+ END
+ SUB: %i 1
+ ADD: %x 300
+REPEAT
+POSITION: 0 1000
+LINE:  1500   1000 location
